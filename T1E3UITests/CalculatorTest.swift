@@ -25,6 +25,27 @@ class CalculatorTest: XCTestCase {
         XCTAssertEqual(calc.makeOperation(),10,"Error")
     }
     
+    func testResta(){
+        calc.operator1 = 3
+        calc.operator2 = 1
+        calc.operation = "-"
+        XCTAssertEqual(calc.makeOperation(),2,"Error")
+    }
+    
+    func testMultiplica(){
+        calc.operator1 = 4
+        calc.operator2 = 4
+        calc.operation = "*"
+        XCTAssertEqual(calc.makeOperation(),16,"Error")
+    }
+    
+    func testDivide(){
+        calc.operator1 = 4
+        calc.operator2 = 4
+        calc.operation = "/"
+        XCTAssertEqual(calc.makeOperation(),1,"Error")
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
